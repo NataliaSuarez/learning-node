@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-light-webfont.woff') format('woff'),
+       url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+       url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #526488;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 20px;
+  color: #00c79a;
+  background: -webkit-linear-gradient(330deg, #00e880 0%, #00c69a 25%, #00e880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 36px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}

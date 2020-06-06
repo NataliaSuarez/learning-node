@@ -1,0 +1,71 @@
+@import 'vue-loading-overlay/dist/vue-loading.css';
+
+.text-page {
+  font-family: 'Montserrat', sans-serif;
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  padding: 10px;
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  h1 {
+    font-weight: 700;
+    line-height: 4;
+    font-size: 30px;
+  }
+  
+  h2 {
+    font-weight: 700;
+    line-height: 3;
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 2.5;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
+  ol {
+    margin-left: 10%;
+    list-style-type: upper-roman;
+  }
+
+  ul {
+    margin-left: 10%;
+    list-style: disc;
+    margin-bottom: 2%;
+  }
+
+  .requirements {
+    font-weight: 700;
+    .items {
+      font-weight: normal;
+    }
+  }
+
+  .complexity {
+    font-weight: 700;
+    .easy {
+      color: green;
+    }
+    .medium {
+      color: orange;
+    }
+    .hard {
+      color: red;
+    }
+  }
+  .idea {
+    color: orange;
+    font-weight: 700;
+    margin-right: 2%;
+    font-size: 90%
+  }
+}
