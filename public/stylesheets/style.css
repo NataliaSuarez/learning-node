@@ -40,3 +40,14 @@ body {
   word-spacing: 5px;
   padding-bottom: 15px;
 }
+
+.btn-420 {
+  background-color: #00e880 !important;
+  color: #fafafa !important;
+  font-weight: 600 !important;
+}
+
+
+.table-420{
+  color: #526488 !important;
+}
