@@ -28,5 +28,13 @@ block content
               th="Nº"
               th="Titulo"
               th="Descripcion"
+              th="Fecha"
               th="Accion"
           tbody
+            each post, index in posts
+              tr
+                th=index+1
+                th=post.title
+                th=post.description
+                th=post.date
+                th="algo"
