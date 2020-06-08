@@ -12,7 +12,7 @@ var postsRouter = require('./routes/posts');
 var app = express();
 
 mongoose.connect(
-  'mongodb://localhost/app420',
+  'mongodb://liyos:liyos@localhost/app420',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
