@@ -11,6 +11,9 @@ var postsRouter = require('./routes/posts');
 
 var app = express();
 
+app.locals.moment = require('moment');
+app.locals.moment.locale('es');
+
 mongoose.connect(
   'mongodb://liyos:liyos@localhost/app420',
   {
