@@ -21,4 +21,16 @@ router.get('/delete/:id', async(req, res) => {
     res.redirect('/posts');
 });
 
+router.get('/edit/:id', async(req, res) => {
+    const { id } = req.params;
+    const post = await Post.findById(id);
+    res.render('post_edit', { post: post});
+});
+
+router.post('/edit/:id', async(req, res) => {
+    const { id } = req.params;
+    await Post.updateOne({_id:id}, req.body);
+    res.redirect('/posts');
+});
+
 module.exports = router;

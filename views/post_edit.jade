@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1(class='title')= "Posts"
+  p(class='subtitle') Editazo
+
+  div(class='container')
+    div(class='row')
+      //- FORM
+      div(class='col-md-6')
+        div(class='card')
+          div(class='card-body')
+            form(action='/posts/edit/'+post.id, method='POST')
+              div(class='form-group')
+                input(type='text', name='title', placeholder='Titulo', class='form-control' value=post.title)
+              div(class='form-group')
+                textarea(name='description', cols='30', rows='3', placeholder='Descripción', class='form-control')=post.description
+              div(class='form-group')
+                textarea(name='content', cols='30', rows='10', placeholder='Contenido', class='form-control')=post.content
+              div(class='form-group')
+                input(type='text', name='link', placeholder='Link', class='form-control' value=post.link)
+              button(type='submit', class='btn btn-420 btn-block')="listo!"
