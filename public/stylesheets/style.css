@@ -66,6 +66,7 @@ body {
   font-weight: 600 !important;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  font-size: 10px !important;
 }
 
 .btn-420-bordered:hover{
@@ -81,6 +82,11 @@ body {
 .table-420{
   color: #396335 !important;
   font-family: 'Montserrat', sans-serif;
+}
+
+.table-title-420{
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .div-a-420{
