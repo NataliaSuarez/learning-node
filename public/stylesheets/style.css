@@ -13,7 +13,7 @@ body {
   font-weight: 300;
   font-size: 24px;
   letter-spacing: 1px;
-  color: #526488;
+  color: #396335;
   padding: 1em;
   margin: 1em;
 }
@@ -27,27 +27,66 @@ body {
   letter-spacing: 1px;
   position: relative;
   padding-bottom: 20px;
-  color: #00c79a;
-  background: -webkit-linear-gradient(330deg, #00e880 0%, #00c69a 25%, #00e880 100%);
+  color: #ae20b3;
+  background: -webkit-linear-gradient(330deg, #207a1a 0%, #24b32f 25%, #1edb27 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 36px;
-  color: #526488;
+  color: #396335;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
 
+.comment{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 18px;
+  color: #396335;
+  word-spacing: 3px;
+  padding-bottom: 15px;
+}
+
 .btn-420 {
-  background-color: #00e880 !important;
+  background-color: #24b32f !important;
   color: #fafafa !important;
   font-weight: 600 !important;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase !important;
+}
+
+.btn-420-bordered {
+  border-color: #24b32f !important;
+  color: #24b32f !important;
+  font-weight: 600 !important;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-420-bordered:hover{
+  background-color: #24b32f !important;
+  color: #fafafa !important;
+}
+
+.form-420{
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 .table-420{
-  color: #526488 !important;
+  color: #396335 !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.div-a-420{
+  padding:2px !important;
+}
+
+.a-420{
+  text-decoration: none !important;
 }
