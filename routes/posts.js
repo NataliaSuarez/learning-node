@@ -5,7 +5,7 @@ const Post = require('../models/post');
 
 /* GET posts page. */
 router.get('/', async (req, res) => {
-    const posts = await Post.find();
+    const posts = await Post.find().sort({date: 'desc'});
     res.render('posts', { posts: posts });
 });
 
