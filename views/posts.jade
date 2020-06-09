@@ -29,19 +29,14 @@ block content
         table(class='table table-responsive-sm table-420')
           thead
             tr
-              th="Nº"
-              th="Titulo"
-              th="Descripcion"
-              th="Fecha"
-              th="Accion"
+              th(colspan="4", class='table-title-420')="posteos del día"
           tbody
-            each post, index in posts
+            each post in posts
               tr
-                th=index+1
-                th=post.title
-                th=post.description
                 th
                   p #{moment(post.date).startOf('minutes').fromNow(Date.now())}
+                th=post.title
+                th=post.description
                 th
                   div(class='div-a-420')
                     a(href='/posts/edit/'+post._id, class='a-420')
