@@ -2,27 +2,31 @@ extends layout
 
 block content
   h1(class='title')= "Posts"
-  p(class='subtitle') flashasos # ideas # debates
+  div(style='display: flex;')
+    p(class='comment') linkeá y compartí algo que te haya gustado hoy
+    p(role="img", aria-label="sparkles") &#10024;
 
-  div(class='container')
+
+  div
     div(class='row')
       //- FORM
       div(class='col-md-6')
-        div(class='card')
-          div(class='card-body')
-            form(action='/posts/add', method='POST')
-              div(class='form-group')
-                input(type='text', name='title', placeholder='Titulo', class='form-control')
-              div(class='form-group')
-                textarea(name='description', cols='30', rows='3', placeholder='Descripción', class='form-control')
-              div(class='form-group')
-                textarea(name='content', cols='30', rows='10', placeholder='Contenido', class='form-control')
-              div(class='form-group')
-                input(type='text', name='link', placeholder='Link', class='form-control')
-              button(type='submit', class='btn btn-420 btn-block')="listo!"
+        div(class='form-420')
+          div(class='card')
+            div(class='card-body')
+              form(action='/posts/add', method='POST')
+                div(class='form-group')
+                  input(type='text', name='title', placeholder='Titulo', class='form-control')
+                div(class='form-group')
+                  textarea(name='description', rows='3', placeholder='Descripción', class='form-control')
+                div(class='form-group')
+                  textarea(name='content', rows='6', placeholder='Contenido', class='form-control')
+                div(class='form-group')
+                  input(type='text', name='link', placeholder='Link', class='form-control')
+                button(type='submit', class='btn btn-420 btn-block')="listo!"
       //- TABLE
       div(class='col-md-6')
-        table(class='table table-bordered table-hover table-420')
+        table(class='table table-responsive-sm table-420')
           thead
             tr
               th="Nº"
@@ -36,8 +40,12 @@ block content
                 th=index+1
                 th=post.title
                 th=post.description
-                th=post.date
                 th
-                  a(href='/posts/delete/'+post._id)="delete"
-                  br
-                  a(href='/posts/edit/'+post._id)="edit"
+                  p #{moment(post.date).startOf('minutes').fromNow(Date.now())}
+                th
+                  div(class='div-a-420')
+                    a(href='/posts/edit/'+post._id, class='a-420')
+                      button(type='button', class='btn btn-420-bordered btn-block') updatear
+                  div(class='div-a-420')
+                    a(href='/posts/delete/'+post._id, class='a-420')
+                      button(type='button', class='btn btn-420-bordered btn-block') boletear
