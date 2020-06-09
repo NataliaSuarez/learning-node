@@ -96,3 +96,7 @@ body {
 .a-420{
   text-decoration: none !important;
 }
+
+th {
+  font-weight: 300;
+}
