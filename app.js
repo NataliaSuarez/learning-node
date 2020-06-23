@@ -4,25 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-var express_graphql = require('express-graphql');
-var { buildSchema } = require('graphql');
-
-
-// GraphQL schema
-var schema = buildSchema(`
-    type Query {
-        message: String
-    }
-`);
-
-// Root resolver
-var root = {
-  message: () => 'Hello World!'
-};
-
+const graphqlHTTP = require('express-graphql');
+const typeDefs = require('./graphql/types');
+const resolvers = require('./graphql/resolvers');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts');
+
+const { makeExecutableSchema } = require('@graphql-tools/schema');
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
 
 var app = express();
 
@@ -38,10 +31,9 @@ mongoose.connect(
   .then(db => console.log('Database connected! ;)'))
   .catch(err => console.log(err));
 
-app.use('/graphql', express_graphql({
-  schema: schema,
-  rootValue: root,
-  graphiql: true
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: true,
 }));
 
 app.listen(4000, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));

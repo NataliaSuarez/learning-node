@@ -130,3 +130,27 @@ switched to db app420
 > db.createUser({ user:"liyos",pwd:"liyos",roles:["readWrite"]})
 Successfully added user: { "user" : "liyos", "roles" : [ "readWrite" ] }
 ```
+
+---
+
+### About GraphQl
+
+Run server and visit `localhost:4000/graphql`
+
+You can make querys. Examples:
+
+```json
+query getPost($id: String!) {
+  post(id: $id) {
+    title,
+    description,
+    content
+  }
+}
+query getPosts {
+  posts {
+    title,
+    content,
+  }
+}
+```
