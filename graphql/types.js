@@ -11,8 +11,13 @@ type Post {
   content: String
 }
 
+type Mutation {
+  createPost(title: String, description: String, content: String): Post
+}
+
 schema {
-  query: Query
+  query: Query,
+  mutation: Mutation
 }
 `;
 

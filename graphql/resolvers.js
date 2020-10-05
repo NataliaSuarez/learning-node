@@ -10,6 +10,12 @@ const resolvers = {
     posts: async (args) => {
       return await Post.find().sort({date: 'desc'});
     },
+  },
+  Mutation: {
+    createPost: async (root, args) => {
+      const res = new Post({...args});
+      return await res.save();
+    }
   }
 };
 

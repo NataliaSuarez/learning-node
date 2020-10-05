@@ -185,3 +185,12 @@ with Query variables:
   "id": "5f7b223d7c2c7d7f8e8f45e3"
 }
 ```
+
+```
+mutation createPost {
+    createPost(title: "title falopa", description: "descripcion falopa", content: "content falopa") {
+        id,
+    		title
+    }
+}
+```
