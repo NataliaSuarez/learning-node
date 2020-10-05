@@ -23,7 +23,7 @@ app.locals.moment = require('moment');
 app.locals.moment.locale('es');
 
 mongoose.connect(
-  'mongodb://liyos:liyos@localhost/app420',
+  'mongodb://localhost/app420',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

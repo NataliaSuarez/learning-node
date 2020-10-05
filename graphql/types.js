@@ -5,7 +5,7 @@ type Query {
 }
 
 type Post {
-  id: Int
+  id: String!
   title: String
   description: String,
   content: String

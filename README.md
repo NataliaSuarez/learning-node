@@ -64,6 +64,30 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
 ```
+Otra opción sin pass
+```yml
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/.mongo:/var/lib/mongo
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+```
+
+O levantando las imagenes:
+
+`docker run -d -p 27017:27017 -v ~/data:/data/db mongo:3.2`
+
+`docker run --restart always -d -p 27017:27017 -v ~/data:/data/db mongo:3.2`
 
 se levanta con `docker-compose up` o con `-d` desde el root ó donde esta el archivo docker-compose.yml
 
@@ -149,8 +173,15 @@ query getPost($id: String!) {
 }
 query getPosts {
   posts {
+    id,
     title,
     content,
   }
+}
+```
+with Query variables:
+```
+{
+  "id": "5f7b223d7c2c7d7f8e8f45e3"
 }
 ```
