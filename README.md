@@ -1,4 +1,4 @@
-# Simple project to learning node `App 420`
+# Simple project to learning node `App`
 
 > My idea is learn without a horizon, just for curious
 
