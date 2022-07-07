@@ -16,7 +16,7 @@
     "graphql-tools": "^6.0.10",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.18",
     "morgan": "~1.9.1"
   },
